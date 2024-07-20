@@ -1,3 +1,6 @@
 
 
-key : val
+SVC :
+  kernel : 'linear'
+  gamma : 0.8
+  C : 15

@@ -31,7 +31,7 @@ class ModelTrainer:
             svc = Pipeline(
             [
                 ('pca' , PCA(n_components = 32)),
-                ('svc' , SVC(kernel = 'rbf', gamma = 0.1, C = 10))
+                ('svc' , SVC())
             ]
             )
 
