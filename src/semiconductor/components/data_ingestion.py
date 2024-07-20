@@ -38,6 +38,8 @@ class DataIngestion:
 
             raw_data.to_csv(self.config.local_data_file, index=False)
 
+            logger.info(f'----------The shape of the Raw data is {raw_data.shape}--------------------')
+
             connection.close()
 
         except Exception as e:
