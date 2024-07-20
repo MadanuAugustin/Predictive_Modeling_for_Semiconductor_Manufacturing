@@ -1,3 +1,73 @@
 
 
-key : val
+# yaml files should not be empty which throws an error
+# schema is nothing but how many columns our data is having and its data types and column names
+
+COLUMNS :
+  feature_1  : float64
+  feature_2  : float64
+  feature_3  : float64
+  feature_4  : float64
+  feature_5  : float64
+  feature_6  : float64
+  feature_7  : float64
+  feature_8  : float64
+  feature_9  : float64
+  feature_10  : float64
+  feature_11  : float64
+  feature_12  : float64
+  feature_13  : float64
+  feature_14  : float64
+  feature_15  : float64
+  feature_16  : float64
+  feature_17  : float64
+  feature_18  : float64
+  feature_19  : float64
+  feature_20  : float64
+  feature_21  : float64
+  feature_22  : float64
+  feature_23  : float64
+  feature_24  : float64
+  feature_25  : float64
+  feature_26  : float64
+  feature_27  : float64
+  feature_28  : float64
+  feature_29  : float64
+  feature_30  : float64
+  feature_31  : float64
+  feature_32  : float64
+  feature_33  : float64
+  feature_34  : float64
+  feature_35  : float64
+  feature_36  : float64
+  feature_37  : float64
+  feature_38  : float64
+  feature_39  : float64
+  feature_40  : float64
+  feature_41  : float64
+  feature_42  : float64
+  feature_43  : float64
+  feature_44  : float64
+  feature_45  : float64
+  feature_46  : float64
+  feature_47  : float64
+  feature_48  : float64
+  feature_49  : float64
+  feature_50  : float64
+  feature_51  : float64
+  feature_52  : float64
+  feature_53  : float64
+  feature_54  : float64
+  feature_55  : float64
+  feature_56  : float64
+  feature_57  : float64
+  feature_58  : float64
+  feature_59  : float64
+  feature_60  : float64
+  feature_61  : float64
+  feature_62  : float64
+  feature_63  : float64
+  PassFail    : int64
+
+TARGET_COLUMN :
+  name : PassFail
