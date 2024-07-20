@@ -5,11 +5,10 @@ import pandas as pd
 import joblib
 from sklearn.model_selection import train_test_split
 from src.semiconductor import logger, CustomException
-from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
-from sklearn.decomposition import PCA
 from src.semiconductor.entity.config_entity import DataTransformationConfig
+
 
 class DataTransformation:
     def __init__(self, config : DataTransformationConfig):
