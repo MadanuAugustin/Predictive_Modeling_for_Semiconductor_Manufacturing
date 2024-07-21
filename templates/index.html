@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Modeling for Semiconductor Manufacturing</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #87cefa;
+            /* Light Sky Blue background */
+            color: #8b008b;
+            /* Dark Magenta text */
+            margin: 0;
+            padding: 0;
+        }
+
+        .login {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #98fb98;
+            /* Pale Green background */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #8b008b;
+            /* Dark Magenta text */
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .mb-3 {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #8b008b;
+            /* Dark Magenta text */
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px 10px;
+            /* Adjusted padding to ensure placeholders are fully visible */
+            box-sizing: border-box;
+            border: 1px solid #8b0000;
+            border-radius: 4px;
+            background-color: #f0e68c;
+            /* Khaki background */
+            color: #2f4f4f;
+            font-size: 14px;
+        }
+
+        .form-control::placeholder {
+            color: #c71585;
+            /* Medium Violet Red placeholder */
+        }
+
+        .form-control:focus {
+            border-color: #ff4500;
+            outline: none;
+            background-color: #ff6347;
+            /* Tomato background on focus */
+        }
+
+        select.form-control,
+        input.form-control {
+            height: auto;
+        }
+
+        .btn-primary {
+            background-color: #ffa500;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff8c00;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #8b008b;
+            /* Dark Magenta text */
+            font-size: 22px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <h1>Predictive Modeling for Semiconductor Manufacturing</h1>
+
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_1</label>
+                <input class="form-control" type="number" name="feature_1" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_2</label>
+                <input class="form-control" type="number" name="feature_2" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_3</label>
+                <input class="form-control" type="number" name="feature_3" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_4</label>
+                <input class="form-control" type="number" name="feature_4" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_5</label>
+                <input class="form-control" type="number" name="feature_5" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_6</label>
+                <input class="form-control" type="number" name="feature_6" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_7</label>
+                <input class="form-control" type="number" name="feature_7" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_8</label>
+                <input class="form-control" type="number" name="feature_8" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_9</label>
+                <input class="form-control" type="number" name="feature_9" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_10</label>
+                <input class="form-control" type="number" name="feature_10" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_11</label>
+                <input class="form-control" type="number" name="feature_11" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_12</label>
+                <input class="form-control" type="number" name="feature_12" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_13</label>
+                <input class="form-control" type="number" name="feature_13" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_14</label>
+                <input class="form-control" type="number" name="feature_14" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_15</label>
+                <input class="form-control" type="number" name="feature_15" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_16</label>
+                <input class="form-control" type="number" name="feature_16" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_17</label>
+                <input class="form-control" type="number" name="feature_17" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_18</label>
+                <input class="form-control" type="number" name="feature_18" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_19</label>
+                <input class="form-control" type="number" name="feature_19" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_20</label>
+                <input class="form-control" type="number" name="feature_20" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_21</label>
+                <input class="form-control" type="number" name="feature_21" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_22</label>
+                <input class="form-control" type="number" name="feature_22" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_23</label>
+                <input class="form-control" type="number" name="feature_23" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_24</label>
+                <input class="form-control" type="number" name="feature_24" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_25</label>
+                <input class="form-control" type="number" name="feature_25" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_26</label>
+                <input class="form-control" type="number" name="feature_26" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_27</label>
+                <input class="form-control" type="number" name="feature_27" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_28</label>
+                <input class="form-control" type="number" name="feature_28" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_29</label>
+                <input class="form-control" type="number" name="feature_29" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_30</label>
+                <input class="form-control" type="number" name="feature_30" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_31</label>
+                <input class="form-control" type="number" name="feature_31" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_32</label>
+                <input class="form-control" type="number" name="feature_32" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_33</label>
+                <input class="form-control" type="number" name="feature_33" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_34</label>
+                <input class="form-control" type="number" name="feature_34" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_35</label>
+                <input class="form-control" type="number" name="feature_35" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_36</label>
+                <input class="form-control" type="number" name="feature_36" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_37</label>
+                <input class="form-control" type="number" name="feature_37" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_38</label>
+                <input class="form-control" type="number" name="feature_38" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_39</label>
+                <input class="form-control" type="number" name="feature_39" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_40</label>
+                <input class="form-control" type="number" name="feature_40" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_41</label>
+                <input class="form-control" type="number" name="feature_41" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_42</label>
+                <input class="form-control" type="number" name="feature_42" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_43</label>
+                <input class="form-control" type="number" name="feature_43" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_44</label>
+                <input class="form-control" type="number" name="feature_44" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_45</label>
+                <input class="form-control" type="number" name="feature_45" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_46</label>
+                <input class="form-control" type="number" name="feature_46" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_47</label>
+                <input class="form-control" type="number" name="feature_47" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_48</label>
+                <input class="form-control" type="number" name="feature_48" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_49</label>
+                <input class="form-control" type="number" name="feature_49" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_50</label>
+                <input class="form-control" type="number" name="feature_50" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_51</label>
+                <input class="form-control" type="number" name="feature_51" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_52</label>
+                <input class="form-control" type="number" name="feature_52" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_53</label>
+                <input class="form-control" type="number" name="feature_53" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_54</label>
+                <input class="form-control" type="number" name="feature_54" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_55</label>
+                <input class="form-control" type="number" name="feature_55" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_56</label>
+                <input class="form-control" type="number" name="feature_56" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_57</label>
+                <input class="form-control" type="number" name="feature_57" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_58</label>
+                <input class="form-control" type="number" name="feature_58" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_59</label>
+                <input class="form-control" type="number" name="feature_59" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_60</label>
+                <input class="form-control" type="number" name="feature_60" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_61</label>
+                <input class="form-control" type="number" name="feature_61" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_62</label>
+                <input class="form-control" type="number" name="feature_62" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sensory_63</label>
+                <input class="form-control" type="number" name="feature_63" placeholder="Enter the value" step="0.01" />
+            </div>
+
+            <div class="mb-3">
+                <input class="btn btn-primary" type="submit" value="Submit" />
+            </div>
+        </form>
+
+        <h2>The quality of the Semiconductor is predicted as: {{results}}</h2>
+    </div>
+</body>
+
+</html>
