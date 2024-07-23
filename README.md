@@ -21,7 +21,8 @@ The performance of the models is evaluated using metrics such as accuracy, preci
 
 ### PROJECT STRUCTURE:
 
-![image](https://github.com/user-attachments/assets/f1f9a991-112a-4e4c-94e4-039a4cdf2256)
+![image](https://github.com/user-attachments/assets/d12e2265-3480-4f71-8a03-56afc5351ee6)
+
 
 ---
 
