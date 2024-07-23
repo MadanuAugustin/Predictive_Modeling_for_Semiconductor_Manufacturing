@@ -13,7 +13,7 @@ from src.semiconductor  import logger, CustomException
 
 class PredictionPipeline:
     def __init__(self):
-        self.model = joblib.load(Path('artifacts//model_trainer//model.joblib'))
+        self.model = joblib.load(Path('model//best_svc_model.pkl'))
         self.preprocessorObj = joblib.load(Path('artifacts//data_transformation//preprocessor_obj.joblib'))
 
 
